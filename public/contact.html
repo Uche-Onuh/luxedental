@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LJ4FXNPXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4LJ4FXNPXX');
+  gtag('config', 'AW-10787213867');
+</script>
+    <meta property="og:image" content="/public/images/Screenshot_20211123-180716_Instagram.jpg" />
+    <meta name="description" content="Book an appointment with the best dentists in Lagos instantly.">
+    <meta name="author" content="Onuh Uche John">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://luxedental.com.ng/contact"/>
+    <meta property="og:title" content="Luxe Dental" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/contact.css">
     <script src="https://kit.fontawesome.com/faa63b78a2.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/png" href="images/luxe logo-1.png">
     <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-    <title>Contact Us</title>
+    <title>Contact Us |  Top Dentist in Lagos - Book Online</title>
 </head>
 <body id="contact">
     <div class="arrow-btn">
@@ -38,6 +54,7 @@
                             <li><a href="/restorative">Restorative Dentistry</a></li>
                             <li><a href="/implants">Implants</a> </li>
                             <li><a href="/orthondontics">Orthodontics</a></li>
+                            <li><a href="/invisalign">Invisalign</a></li>
                             <li><a href="/edondontics">Endodontics</a></li> 
                             <li><a href="/radiography">Radiography</a></li> 
                             <li><a href="/whitening">Laser Tooth Whitening</a></li>  
@@ -81,8 +98,9 @@
                             <i class="fas fa-envelope"></i>
                             <div class="details">
                                 <h4>Email</h4>
-                                <a href="mailto:anyone@gmail.com">anyone@gmail.com</a> <br>
-                                <a href="mailto:anyone@gmail.com">anyone@gmail.com</a>
+                                <a href="mailto:info@luxedental.com.ng">
+                                    info@luxedental.com.ng</a> <br>
+                                <!--<a href="drfunmi@luxedental.com.ng">drfunmi@luxedental.com.ng</a>-->
                             </div>
                         </div>
                     </div>
@@ -91,7 +109,8 @@
                             <i class="fas fa-phone"></i>
                             <div class="details">
                                 <h4>Call</h4>
-                                <a href="tel:09036697085">09036697085</a>
+                                <a href="tel:08053552231">08053552231</a> <br>
+                                <a href="tel:09044374007">09044374007</a>
                             </div>
                         </div>
                     </div>
@@ -130,9 +149,9 @@
         </div>
     </div>
 
-    <div id="map">
-
-    </div>
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.509654631215!2d3.355989814297126!3d6.583387424291832!2m3!
+    1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b9214a6e00ae7%3A0x84e8d4be29d234bf!2s46%20Isaac%20John%20St%2C%20Ikeja%20GRA%20101233%2C%20Ikeja
+    !5e0!3m2!1sen!2sng!4v1636188828605!5m2!1sen!2sng" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
 
 
 
@@ -195,11 +214,11 @@
                             </li>
                             <li>
                                 <p><b>Phone/Whatsapp:</b></p>
-                                <p><a href="tel:08053552231">(+234) 805 355 2231</a></p>
+                                <p><a href="tel:+2348053552231">(+234) 805 355 2231</a></p>
                             </li>
                             <li>
                                 <p><b>Email</b></p>
-                                <p><a href="mailto:dentist@luxedental.com.ng">dentist@luxedental.com.ng</a></p>
+                                <p><a href="mailto:info@luxedental.com.ng">info@luxedental.com.ng</a></p>
                             </li>
                         </ul>
                     </div>
@@ -233,7 +252,7 @@
                         </ul>
 
                         <ul class="links3">
-                            <a href="https://api.whatsapp.com/send?phone=08053552231"><img src="./public/images/whatsapp.png" alt="whatsapp"></a>
+                            <a href="https://api.whatsapp.com/send?phone=+2348053552231"><img src="./public/images/whatsapp.png" alt="whatsapp"></a>
                         </ul>
                 </div>
                 
@@ -247,9 +266,9 @@
                             <br>
                             Mon-Sat / 9am-5pm <br>
                         </div>
-                        <div class="payment">
-                            <img src="./public/images/payment-options.jpg" alt="">
-                        </div>
+                        <!--<div class="payment">-->
+                        <!--    <img src="./public/images/payment-options.jpg" alt="">-->
+                        <!--</div>-->
                     </div>
                 </div>
                     </div>
@@ -278,6 +297,12 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOFZhJcCjmlPRMlaiNaKcrUPH4MufaedE&callback=initMap&v=weekly"
       async
     ></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/5.0.1/firebase-analytics.js"></script>
+
+    <script src="js/firebase.js"></script>
     <script src="./public/main.js"></script>
     <script src="./public/app.js"></script>
 </body>

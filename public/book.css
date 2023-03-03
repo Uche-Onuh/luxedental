@@ -358,6 +358,26 @@ select option:hover {
   background-color: #eec314;
 }
 
+.thanks {
+  margin: 50px auto 50px;
+  width: 80%;
+  text-align: center;
+  align-content: center;
+  background-color: lightgray;
+  padding: 50px;
+}
+
+.thanks p {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.thanks a{
+  font-size: 15px;
+  color: #000;
+}
+
 footer {
   background-color: #272723;
   color: #8a8a8a;

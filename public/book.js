@@ -46,12 +46,11 @@ contactForm.addEventListener("submit", e => {
   console.log(formData);
 
   let xhr = new XMLHttpRequest();
-  xhr.open("POST", "/book");
+  xhr.open("POST", "/book", true);
   xhr.setRequestHeader("content-type", "application/json");
   xhr.onload = function () {
-    console.log(xhr.responseText);
-    if (xhr.responseText === "success") {
-      alert("Appointment Booked");
+    if (xhr.status === 200) {
+      window.location = "/thanks";
       firstName.value = "";
       lastName.value = "";
       email.value = "";
@@ -60,7 +59,6 @@ contactForm.addEventListener("submit", e => {
       time.value = "";
       selectedValue.value = "Select Service";
     } else {
-      console.log("Something went wrong");
     }
   };
   xhr.send(JSON.stringify(formData));

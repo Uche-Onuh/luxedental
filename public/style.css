@@ -194,7 +194,7 @@ li.move-right {
 }
 
 .myslider {
-  height: 90vh;
+  height: 85vh;
   display: none;
   overflow: hidden;
 }
@@ -431,7 +431,7 @@ li.move-right {
   align-self: stretch;
   padding: 30px 0px 20px 0px;
   margin-bottom: 10px;
-  color: #fff;
+  color: #000;
 }
 
 .col-5:nth-child(odd) {
@@ -439,12 +439,12 @@ li.move-right {
 }
 
 .col-5:nth-child(even) {
-  background: #000;
+  background: #eec314;
 }
 
 .col-5 img {
   height: 50px;
-  background: #eec314;
+  background: #000;
   border-radius: 100%;
 }
 
@@ -464,7 +464,7 @@ button {
 }
 
 .col-5 a {
-  color: #fff;
+  color: #000;
   font-size: 11px;
   padding: 10px 10px;
   transition: all 0.9s;
@@ -473,11 +473,11 @@ button {
 
 .col-5 a:hover {
   transform: translateY(-10px);
-  color: #eec314;
+  color: #fff;
 }
 
 .col-5 a i {
-  color: #eec314;
+  color: #000;
   font-size: 11px;
   padding-left: 10px;
 }
@@ -538,7 +538,7 @@ button {
   padding-bottom: 10rem;
 }
 
-.testimonial .col-3 {
+.testimonial .col-4 {
   text-align: center;
   padding: 40px 20px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
@@ -546,37 +546,48 @@ button {
   transition: transform 0.5s;
 }
 
-.testimonial .col-3 img {
+.col-4 {
+  flex-basis: 25%;
+  min-width: 250px;
+  text-align: left;
+  margin: 0 0px 30px 0px;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 40px 15px;
+  align-self: stretch;
+}
+
+.testimonial .col-4 img {
   width: 70px;
   margin-top: 18px;
   border-radius: 50px;
 }
 
-.testimonial .col-3 h3 {
+.testimonial .col-4 h3 {
   font-size: 18px;
   color: #555;
 }
 
-.testimonial .col-3 p {
+.testimonial .col-4 p {
   font-size: 15px;
   margin: 12px 0;
   color: #777;
   padding-bottom: 2rem;
 }
 
-.testimonial .col-3 .fa-quote-left {
+.testimonial .col-4 .fa-quote-left {
   font-size: 25px;
   color: #191919;
 }
 
-.testimonial .col-3 .fa-star {
+.testimonial .col-4 .fa-star {
   font-size: 18px;
   color: #eec314;
 }
 
-.testimonial .col-3:hover {
+.testimonial .col-4:hover {
   transform: translateY(-10px);
 }
+
 
 .parallax {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -1220,5 +1231,12 @@ b {
     flex-direction: column;
     align-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .col-2 img {
+    width: 100%;
+    height: 300px;
   }
 }

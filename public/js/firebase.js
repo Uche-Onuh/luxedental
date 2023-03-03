@@ -1,18 +1,21 @@
 let firebaseConfig = {
-  apiKey: "AIzaSyDOW7OG2O9-6Pgs_79VqGVSJPq3oITL6Es",
-  authDomain: "luxe-dental-f2df2.firebaseapp.com",
-  projectId: "luxe-dental-f2df2",
-  storageBucket: "luxe-dental-f2df2.appspot.com",
-  messagingSenderId: "792390556619",
-  appId: "1:792390556619:web:a152b1a406175327ba744e",
+ apiKey: "AIzaSyCAY0BzHaRQRT8AGYTciVHadsMCQx-BL_k",
+  authDomain: "luxe-dental-9f613.firebaseapp.com",
+  projectId: "luxe-dental-9f613",
+  storageBucket: "luxe-dental-9f613.appspot.com",
+  messagingSenderId: "1061529260851",
+  appId: "1:1061529260851:web:cfe098388f4c0a3680a446",
+  measurementId: "G-MWFXSYP7ZM",
 };
 
 firebase.initializeApp(firebaseConfig);
 
 let db = firebase.firestore();
+const analytics = getAnalytics();
 
 const firestore = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 firestore.settings(settings);
+firebase.analytics().logEvent('notification_received');
 
   

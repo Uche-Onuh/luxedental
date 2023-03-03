@@ -3,10 +3,13 @@ const express = require("express");
 const request = require("request");
 const app = express();
 const nodemailer = require("nodemailer");
+const path = require("path");
 
 app.use(express.urlencoded({ extended: true }));
 app.use("/public", express.static("public"));
 app.use(express.json());
+
+
 
 const port = process.env.PORT || 3000;
 
@@ -61,6 +64,12 @@ app.get("/whitening", function (req, res) {
 app.get("/blog", function (req, res) {
   res.sendFile(__dirname + "/public/home.html");
 });
+app.get("/thanks", function (req, res) {
+  res.sendFile(__dirname + "/public/thanks.html");
+});
+app.get("/invisalign", function (req, res) {
+  res.sendFile(__dirname + "/public/invisalign.html");
+});
 
 app.post("/send", (req, res) => {
   const output = `
@@ -78,13 +87,12 @@ app.post("/send", (req, res) => {
   `;
 
   let transporter = nodemailer.createTransport({
-    // host: "domain",
-    // port: 587,
-    // secure: false,
-    service: "gmail",
+    host: "mail.luxedental.com.ng",
+    port: 587,
+    secure: false,
     auth: {
-      user: "onuhblaze@gmail.com",
-      pass: "Happyn3wye@r",
+      user: "info@luxedental.com.ng",
+      pass: "This1s4luxedent@l",
     },
     tls: {
       rejectUnauthorized: false,
@@ -92,8 +100,8 @@ app.post("/send", (req, res) => {
   });
 
   let mailOptions = {
-    from: "Luxe-Dental Website Contact, <onuhblaze@gmail.com>",
-    to: "onuhblaze@gmail.com",
+    from: "Luxe-Dental Website Contact-form, <info@luxedental.com.ng>",
+    to: "info@luxedental.com.ng",
     subject: "Luxe-Dental Contact Message",
     text: "Hello",
     html: output,
@@ -110,7 +118,7 @@ app.post("/send", (req, res) => {
 
 app.post("/book", (req, res) => {
   const output = `
-    <p>You have a appointment</p>
+    <p>You have an appointment</p>
     <h3>Contact Details</h3>
     <ul>
       <li>First-name: ${req.body.firstName}</li>
@@ -127,13 +135,12 @@ app.post("/book", (req, res) => {
   `;
 
   let transporter = nodemailer.createTransport({
-    // host: "domain",
-    // port: 587,
-    // secure: false,
-    service: "gmail",
+    host: "mail.luxedental.com.ng",
+    port: 587,
+    secure: false,
     auth: {
-      user: "onuhblaze@gmail.com",
-      pass: "Happyn3wye@r",
+      user: "info@luxedental.com.ng",
+      pass: "This1s4luxedent@l",
     },
     tls: {
       rejectUnauthorized: false,
@@ -141,8 +148,8 @@ app.post("/book", (req, res) => {
   });
 
   let mailOptions = {
-    from: "Luxe-Dental Booking, <onuhblaze@gmail.com>",
-    to: "onuhblaze@gmail.com",
+    from: "Luxe-Dental Booking, <info@luxedental.com.ng>",
+    to: "info@luxedental.com.ng",
     subject: "Appointment Booking",
     text: req.body.message,
     html: output,
@@ -152,12 +159,12 @@ app.post("/book", (req, res) => {
     if (error) {
       res.send("error");
     } else {
-      res.sendFile(path.join(__dirname, "index.html"));
+      res.sendFile(path.join(__dirname, "/public/thanks.html"));
     }
   });
 });
 
-const path = require("path");
+
 const fileupload = require("express-fileupload");
 const { reset } = require("nodemon");
 const { getMaxListeners } = require("process");
